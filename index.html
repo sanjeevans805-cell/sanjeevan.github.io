@@ -6,11 +6,43 @@
 <title>Sanjeevan S | Cyber Security Portfolio</title>
 
 <style>
- background:radial-gradient(circle,
-rgba(0,255,153,.6) 0%,
-rgba(0,255,153,.3) 20%,
-rgba(0,255,153,.1) 45%,
-transparent 75%);
+.card{
+    position:relative;
+    overflow:hidden;
+    background:#111827;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:20px;
+    padding:30px;
+    transition:.35s;
+    cursor:pointer;
+}
+
+.card::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+    radial-gradient(
+        250px circle at var(--x) var(--y),
+        rgba(0,255,170,.45),
+        transparent 40%
+    );
+    opacity:0;
+    transition:opacity .3s;
+    pointer-events:none;
+}
+
+.card:hover::before{
+    opacity:1;
+}
+
+.card:hover{
+    border-color:#00ffaa;
+    transform:translateY(-8px);
+    box-shadow:
+    0 0 20px rgba(0,255,170,.35),
+    0 0 50px rgba(0,255,170,.25);
+} 
 *{
 margin:0;
 padding:0;
