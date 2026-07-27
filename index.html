@@ -6,6 +6,11 @@
 <title>Sanjeevan S | Cyber Security Portfolio</title>
 
 <style>
+ background:radial-gradient(circle,
+rgba(0,255,153,.6) 0%,
+rgba(0,255,153,.3) 20%,
+rgba(0,255,153,.1) 45%,
+transparent 75%);
 *{
 margin:0;
 padding:0;
@@ -408,23 +413,7 @@ setTimeout(type,1000);
 }
 
 type();
-// Mouse glow for every section
 
-document.querySelectorAll("section").forEach(section => {
-
-    section.addEventListener("mousemove", e => {
-
-        const rect = section.getBoundingClientRect();
-
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-
-        section.style.setProperty("--x", x + "px");
-        section.style.setProperty("--y", y + "px");
-
-    });
-
-});
 </script>
 
 </body>
