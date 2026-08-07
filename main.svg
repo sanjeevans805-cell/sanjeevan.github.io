@@ -1,0 +1,219 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300">
+
+<defs>
+
+<linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+  <stop offset="0%" stop-color="#050816"/>
+  <stop offset="100%" stop-color="#000"/>
+</linearGradient>
+
+<filter id="glow">
+  <feGaussianBlur stdDeviation="4" result="blur"/>
+  <feMerge>
+    <feMergeNode in="blur"/>
+    <feMergeNode in="SourceGraphic"/>
+  </feMerge>
+</filter>
+
+</defs>
+
+<!-- Background -->
+<rect width="1200" height="300" fill="url(#bg)"/>
+
+<!-- Border -->
+<rect
+x="20"
+y="20"
+width="1160"
+height="260"
+rx="8"
+fill="none"
+stroke="#00F5FF"
+stroke-width="2"
+filter="url(#glow)"
+stroke-dasharray="18 8">
+
+<animate
+attributeName="stroke-dashoffset"
+values="0;-300"
+dur="4s"
+repeatCount="indefinite"/>
+
+</rect>
+
+<!-- HUD Corners -->
+<g stroke="#00F5FF"
+stroke-width="4"
+fill="none"
+filter="url(#glow)">
+
+<path d="M20 70V20H70"/>
+<path d="M1130 20H1180V70"/>
+<path d="M20 230V280H70"/>
+<path d="M1130 280H1180V230"/>
+
+<animate
+attributeName="opacity"
+values="1;.3;1"
+dur="1.2s"
+repeatCount="indefinite"/>
+
+</g>
+
+<!-- Moving Scan Line -->
+<rect
+x="30"
+y="30"
+width="1140"
+height="2"
+fill="#00FFFF"
+opacity=".8">
+
+<animate
+attributeName="y"
+values="30;270;30"
+dur="3s"
+repeatCount="indefinite"/>
+
+</rect>
+
+<!-- Top Status -->
+<text
+x="45"
+y="55"
+fill="#00FFFF"
+font-family="Consolas"
+font-size="20">
+
+◢ SCANNING...
+
+<animate
+attributeName="opacity"
+values="1;.5;1"
+dur=".8s"
+repeatCount="indefinite"/>
+
+</text>
+
+<text
+x="930"
+y="55"
+fill="#00FFFF"
+font-family="Consolas"
+font-size="20">
+
+THREAT LOW
+
+</text>
+
+<!-- Name -->
+<text
+x="600"
+y="145"
+text-anchor="middle"
+font-size="42"
+font-family="Consolas"
+fill="#00FFFF"
+filter="url(#glow)">
+
+JEEVAN • ETHICAL HACKER
+
+<animate
+attributeName="opacity"
+values="1;.7;1"
+dur="2s"
+repeatCount="indefinite"/>
+
+</text>
+
+<!-- Network -->
+<text
+x="70"
+y="235"
+fill="#00FFFF"
+font-family="Consolas"
+font-size="18">
+
+NETWORK
+
+</text>
+
+<rect
+x="170"
+y="220"
+width="220"
+height="12"
+fill="#033"/>
+
+<rect
+x="170"
+y="220"
+width="220"
+height="12"
+fill="#00FFFF">
+
+<animate
+attributeName="width"
+values="20;220;180;220"
+dur="2s"
+repeatCount="indefinite"/>
+
+</rect>
+
+<!-- Security -->
+<text
+x="600"
+y="235"
+fill="#00FFFF"
+font-family="Consolas"
+font-size="18">
+
+SECURITY
+
+</text>
+
+<rect
+x="720"
+y="220"
+width="220"
+height="12"
+fill="#033"/>
+
+<rect
+x="720"
+y="220"
+width="220"
+height="12"
+fill="#00FFFF">
+
+<animate
+attributeName="width"
+values="100;220;140;220"
+dur="1.5s"
+repeatCount="indefinite"/>
+
+</rect>
+
+<!-- Status LEDs -->
+<circle cx="1120" cy="18" r="4" fill="#00ff88">
+<animate attributeName="opacity"
+values="1;0;1"
+dur=".6s"
+repeatCount="indefinite"/>
+</circle>
+
+<circle cx="1140" cy="18" r="4" fill="#ffff00">
+<animate attributeName="opacity"
+values="0;1;0"
+dur=".8s"
+repeatCount="indefinite"/>
+</circle>
+
+<circle cx="1160" cy="18" r="4" fill="#00FFFF">
+<animate attributeName="opacity"
+values="1;.3;1"
+dur=".5s"
+repeatCount="indefinite"/>
+</circle>
+
+</svg>
